@@ -1,0 +1,39 @@
+---
+title: "Botswana Climate Metrics Dashboard"
+logo: boi.png
+format: dashboard
+---
+
+```{r setup_pkgs, include=FALSE}
+
+if (!requireNamespace("install.load", quietly = TRUE)) 
+  install.packages("install.load")
+install.load::install_load("shiny","quarto", "gt", "scales", "readr", "dplyr", "knitr", "ggplot2", "ggrepel",  "kableExtra", "htmltools")
+```
+
+```{r setup}
+#| context: setup
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(knitr)
+library(kableExtra)
+library(htmltools)
+```
+#  {.sidebar}
+
+This dashboard displays the following:
+
+| **Field**     | **Details** |
+|--------------|------------|
+| **Purpose**  | A summary of different datasets ranging from the VM's, e.g *Lieferung* (delivery) folder to the DB, offering users a quick overview of the data they are working with or about to process. |  
+| **Requirements** | For the **Lieferodner checks** -> csv `source_files` generated from the `cq_overview.qmd` file to display properly. |  
+| **Date**     | `r Sys.Date()`  |  
+| **Author**   | `r Sys.info()["user"]` |   
+::: {.callout-note collapse="true"}
+
+## Further-Information
+
+More information about check-questions, and some that are not included in this dashboard can be found on [this git wiki page](https://git-int.thuenen.de/invekos/cq_on_db/-/wikis/Check-Questions-Documentation).
+:::
