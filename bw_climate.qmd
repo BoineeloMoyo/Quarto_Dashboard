@@ -35,5 +35,5 @@ This dashboard displays the following:
 
 ## Further-Information
 
-More information about how we are worsening our climate change challenges and impacting electricity and vegetation can be found on [this git wiki page](https://git-int.thuenen.de/invekos/cq_on_db/-/wikis/Check-Questions-Documentation).
+More information about how we are worsening our climate change challenges and impacting electricity and vegetation can be found on [this publication](https://link.springer.com/article/10.1007/s41976-024-00171-7).
 :::
