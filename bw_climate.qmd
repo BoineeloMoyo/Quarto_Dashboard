@@ -27,8 +27,8 @@ This dashboard displays the following:
 
 | **Field**     | **Details** |
 |--------------|------------|
-| **Purpose**  | A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and theirifferent datasets ranging from the VM's, e.g *Lieferung* (delivery) folder to the DB, offering users a quick overview of the data they are working with or about to process. |  
-| **Requirements** | For the **Lieferodner checks** -> csv `source_files` generated from the `cq_overview.qmd` file to display properly. |  
+| **Purpose**  | A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and vegetation growth. *Lieferung*  |  
+| **Data Sources** | For the **Lieferodner checks** -> csv `source_files` generated from the `cq_overview.qmd` file to display properly. |  
 | **Date**     | `r Sys.Date()`  |  
 | **Author**   | `r Sys.info()["user"]` |   
 ::: {.callout-note collapse="true"}
