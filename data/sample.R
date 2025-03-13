@@ -17,9 +17,10 @@ ggplot() +
   theme_void()
 
 
+#182b33 , #345e67, #538586, #76a4a3 , #9ed8d3
 
 # Install and load the required library
-install.packages("plotly")
+install.packages("htmltools")
 library(plotly)
 
 # Create a simple gauge chart
