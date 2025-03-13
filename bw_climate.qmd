@@ -41,5 +41,6 @@ More information about how we are worsening our climate change challenges and im
 ```{r setup}
 #| Variables
 
-dash_colors <- c("#f0e8c3", "#d9d09e", "#c1b77a")
+dash_colors <- c("#f0e8c3", "#d9d09e", "#c1b77a", "")
+#182b33 , #345e67, #538586, #
 ```
