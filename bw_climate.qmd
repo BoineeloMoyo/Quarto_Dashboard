@@ -73,7 +73,6 @@ gauge_chart <- plot_ly(
   )
 )
 gauge_chart
-
 ```
 ::: {.valuebox icon="thermometer-half" color="light" style="color: #2c3f66;"}
 ```{r avr_temp}
@@ -83,3 +82,5 @@ htmltools::HTML(paste0(
   "<p style='font-size:34px; color:#538586; font-weight:bold;'>", 24.5, "°C", "</p>",
   "</div>"
 ))
+```
+:::
