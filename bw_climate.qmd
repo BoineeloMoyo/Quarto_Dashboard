@@ -74,12 +74,23 @@ gauge_chart <- plot_ly(
 )
 gauge_chart
 ```
-::: {.valuebox icon="thermometer-half" color="light" style="color: #2c3f66;"}
+::: {.valuebox icon="thermometer-half" color="light"}
 ```{r avr_temp}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#182b33; font-weight:bold; font-family: Roboto;''>Average Temperature</p>",
   "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>", 24.5, "°C", "</p>",
+  "</div>"
+))
+```
+:::
+
+::: {.valuebox icon="arrow-up" color="light"}
+```{r annual_inc}
+htmltools::HTML(paste0(
+  "<div style='text-align: center;'>",
+  "<p style='font-size:28px; color:#182b33; font-weight:bold; font-family: Roboto;''>Temperature Increase / annum</p>",
+  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>", "+", 2.1, "°C", "</p>",
   "</div>"
 ))
 ```
