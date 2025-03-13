@@ -45,7 +45,9 @@ dash_colors <-  #182b33 , #345e67, #538586, #76a4a3 , #9ed8d3
 ```
 
 
-## **Total Hours of Sunshine** Card
+# Climate Metrics {orientation="columns"}
+## Column {width="70%"}
+### Row {height=30%}
 
 ```{r total_sunshine_card}
 library(plotly)
