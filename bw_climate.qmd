@@ -102,3 +102,8 @@ htmltools::HTML(paste0(
 
 
 ```
+
+```{r rainfall patterns}
+
+
+```
