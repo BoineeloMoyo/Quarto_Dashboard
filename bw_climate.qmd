@@ -79,7 +79,13 @@ gauge_chart <- plot_ly(
     )
   )
 )
-
 gauge_chart
 
 ```
+::: {.valuebox icon="thermometer-half" color="light" style="color: #2c3f66;"}
+``` {r avr_temp}
+### Average Temperature
+
+**Average Temperature**  
+24.5°C
+:::
