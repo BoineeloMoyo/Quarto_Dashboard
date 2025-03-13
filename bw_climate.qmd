@@ -47,28 +47,37 @@ dash_colors <-  #182b33 , #345e67, #538586, #76a4a3 , #9ed8d3
 
 ## **Total Hours of Sunshine** Card
 
-```{python total_sunshine_card}
-import plotly.graph_objects as go
-import plotly.io as pio
+```{r total_sunshine_card}
+library(plotly)
 
-# Sample data
-total_sunshine = 2800  # Replace with actual value
-max_sunshine = 3500  # Hypothetical max sunshine in a year
+# Define the custom color palette
+base_color <- "#345e67"  # Color for all ranges
+threshold_color <- "#9ed8d3"
+title_color <- "#182b33"  # Title color
+value_color <- "#538586" 
 
-fig = go.Figure(go.Indicator(
-    mode = "gauge+number",
-    value = total_sunshine,
-    title = {"text": "Total Sunshine Hours"},
-    gauge = {
-        "axis": {"range": [None, max_sunshine]},
-        "bar": {"color": "orange"},
-        "steps": [
-            {"range": [0, max_sunshine * 0.5], "color": "lightyellow"},
-            {"range": [max_sunshine * 0.5, max_sunshine * 0.8], "color": "gold"},
-            {"range": [max_sunshine * 0.8, max_sunshine], "color": "darkorange"},
-        ],
-    }
-))
+# Create the interactive gauge chart for total hours of sunshine
+gauge_chart <- plot_ly(
+  type = "indicator",
+  mode = "gauge+number+delta",
+  value = 3436,  
+  title = list(
+    text = "Total Hours of Sunshine",
+    font = list(size = 34, color = title_color, family = "Arial", bold = TRUE) 
+  ),
+  gauge = list(
+    axis = list(range = c(840, 3800)), 
+    steps = list(
+      list(range = c(840, 3800), color = base_color) 
+    ),
+    threshold = list(
+      line = list(color = threshold_color, width = 4),  
+      fillcolor = "#d1e1e4",  
+      value = 3436  
+    )
+  )
+)
 
-pio.show(fig)
+gauge_chart
+
 ```
