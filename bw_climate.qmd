@@ -37,3 +37,9 @@ This dashboard displays the following:
 
 More information about how we are worsening our climate change challenges and impacting electricity and vegetation can be found on [this publication](https://link.springer.com/article/10.1007/s41976-024-00171-7).
 :::
+
+```{r setup}
+#| Variables
+
+dash_colors <- c("#f0e8c3", "#d9d09e", "#c1b77a")
+```
