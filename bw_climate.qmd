@@ -18,6 +18,8 @@ library(tidyverse)
 library(dplyr)
 library(tidyr)
 library(knitr)
+library(reshape2)
+library(scales)
 library(kableExtra)
 library(htmltools)
 library(readr) 
@@ -100,18 +102,16 @@ htmltools::HTML(paste0(
 ### Row {height="40%" .tabset}
 
 ```{r heatmap}
-library(plotly)
+# Read the CSV file
+temps <- read.csv("data/avg_monthly_high_temps.csv", sep=",", header=TRUE, stringsAsFactors=FALSE)
 
-temps <- readr::read_csv("./data/avg_monthly_high_temps.csv")
-head(temps)
+# Convert District column to row names
+rownames(temps) <- temps$Districts
+temps$Districts <- NULL
 
-heatmap <- ggplot(data = temps, mapping = aes(x = Sample.name,
-                                                       y = Class,
-                                                       fill = Abundance)) +
-  geom_tile() +
-  xlab(label = "Sample")
+# Melt the data into long format
+temps_long <- melt(temps, variable.name="Month", value.name="Temperature")
 
-mine_heatmap
 
 ```
 
