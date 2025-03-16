@@ -99,6 +99,9 @@ htmltools::HTML(paste0(
 ### Row {height="40%" .tabset}
 
 ```{r heatmap}
+library(plotly)
+
+
 
 
 ```
