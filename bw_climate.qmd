@@ -20,6 +20,7 @@ library(tidyr)
 library(knitr)
 library(kableExtra)
 library(htmltools)
+library(readr) 
 ```
 #  {.sidebar}
 
@@ -101,8 +102,16 @@ htmltools::HTML(paste0(
 ```{r heatmap}
 library(plotly)
 
-temps <- read_csv("")
+temps <- readr::read_csv("./data/avg_monthly_high_temps.csv")
+head(temps)
 
+heatmap <- ggplot(data = temps, mapping = aes(x = Sample.name,
+                                                       y = Class,
+                                                       fill = Abundance)) +
+  geom_tile() +
+  xlab(label = "Sample")
+
+mine_heatmap
 
 ```
 
