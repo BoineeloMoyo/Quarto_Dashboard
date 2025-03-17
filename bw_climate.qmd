@@ -100,6 +100,10 @@ htmltools::HTML(paste0(
 
 ```{r heatmap}
 teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
+temp <- read_csv("~/data/high_temps.csv")
+temp_long <- temp |>
+  pivot_longer(cols = -Districts, names_to = "Month", values_to = "Temperature")
+
 
 ```
 
