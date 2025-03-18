@@ -107,7 +107,19 @@ temp_long <- temp |>
 # Create an ordered factor for months
 month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 temp_long$Month <- factor(temp_long$Month, levels = month_order, ordered = TRUE)
-
+p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text = 
+    paste("Temp:", Temperature, "°C", "<br>District: ", Districts, "<br>Month: ", Month))) +
+  geom_tile() +
+  scale_fill_gradient2(low = "#abcbcf", mid = "#418186", high = "#1e3435", midpoint = mean(temp_long$Temperature)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+  plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 12),
+  axis.title = element_text(family = "Roboto", face = "bold", size = 10),
+  axis.text = element_text(family = "Roboto", size = 8)) +
+  labs(title = "Average Monthly Maximumn Temperatures (°C) of Botswana Districts",
+       x = "Month",
+       y = "District",
+       fill = "Temperature (°C)")
 ```
 
 ```{r rainfall patterns}
