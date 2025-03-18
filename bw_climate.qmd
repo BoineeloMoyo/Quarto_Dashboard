@@ -109,5 +109,7 @@ temp_long <- temp |>
 
 ```{r rainfall patterns}
 df <- read_csv("~/GIT/daten_import/bw_rainfall.csv")
-
+# Convert month and year into a proper date format
+df <- df |>
+  mutate(date = as.Date(paste(year, month, sep = "-"), format = "%Y-%b-%d"))
 ```
