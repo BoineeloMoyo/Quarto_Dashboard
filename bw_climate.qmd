@@ -124,8 +124,8 @@ p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text =
 ggplotly(p, tooltip = "text")
 ```
 
-```{r rainfall patterns}
-df <- read_csv("~/GIT/daten_import/bw_rainfall.csv")
+```{r rainfall}
+df <- read_csv("./data/bw_rainfall.csv")
 # Convert month and year into a proper date format
 df <- df |>
   mutate(date = as.Date(paste(year, month, sep = "-"), format = "%Y-%b-%d"))
@@ -147,4 +147,7 @@ p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
 ggplotly(p, tooltip = "text")
 
 ```
-```{r rainfall patterns}
+```{r humidity}
+# Load Data
+data <- read_csv("./data/humidity_BW.csv")
+```
