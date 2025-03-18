@@ -158,4 +158,7 @@ data$Month <- factor(data$Month, levels = month_order, ordered = TRUE)
 # Define your teal color palette (Darker = Higher Humidity)
 teals <- rev(c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf"))
 
+data <- data |> 
+  mutate(Fill_Color = cut(Measurement, breaks = 5, labels = teals, include.lowest = TRUE))
+
 ```
