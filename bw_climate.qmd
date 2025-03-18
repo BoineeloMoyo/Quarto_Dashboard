@@ -104,6 +104,9 @@ temp <- read_csv("~/data/high_temps.csv")
 temp_long <- temp |>
   pivot_longer(cols = -Districts, names_to = "Month", values_to = "Temperature")
 
+# Create an ordered factor for months
+month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+temp_long$Month <- factor(temp_long$Month, levels = month_order, ordered = TRUE)
 
 ```
 
