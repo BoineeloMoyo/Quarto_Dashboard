@@ -108,6 +108,6 @@ temp_long <- temp |>
 ```
 
 ```{r rainfall patterns}
-
+df <- read_csv("~/GIT/daten_import/bw_rainfall.csv")
 
 ```
