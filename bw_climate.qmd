@@ -192,3 +192,5 @@ paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
 # Convert ggplot to plotly for interactivity
 ggplotly(p, tooltip = "text")
 ```
+
+ref_link: https://github.com/posit-conf-2024/olympicdash/blob/main/olympicdash-r-4.qmd
