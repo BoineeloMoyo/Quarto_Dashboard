@@ -147,3 +147,4 @@ p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
 ggplotly(p, tooltip = "text")
 
 ```
+```{r rainfall patterns}
