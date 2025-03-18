@@ -150,4 +150,12 @@ ggplotly(p, tooltip = "text")
 ```{r humidity}
 # Load Data
 data <- read_csv("./data/humidity_BW.csv")
+
+# Create an ordered factor for months
+month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+data$Month <- factor(data$Month, levels = month_order, ordered = TRUE)
+
+# Define your teal color palette (Darker = Higher Humidity)
+teals <- rev(c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf"))
+
 ```
