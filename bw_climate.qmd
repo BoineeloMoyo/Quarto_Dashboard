@@ -161,4 +161,7 @@ teals <- rev(c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf"))
 data <- data |> 
   mutate(Fill_Color = cut(Measurement, breaks = 5, labels = teals, include.lowest = TRUE))
 
+# Calculate the maximum measurement for the background bars
+max_measurement <- max(data$Measurement)
+
 ```
