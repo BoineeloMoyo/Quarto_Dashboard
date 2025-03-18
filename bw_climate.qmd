@@ -120,6 +120,8 @@ p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text =
        x = "Month",
        y = "District",
        fill = "Temperature (°C)")
+
+ggplotly(p, tooltip = "text")
 ```
 
 ```{r rainfall patterns}
