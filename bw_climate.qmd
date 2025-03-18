@@ -112,4 +112,21 @@ df <- read_csv("~/GIT/daten_import/bw_rainfall.csv")
 # Convert month and year into a proper date format
 df <- df |>
   mutate(date = as.Date(paste(year, month, sep = "-"), format = "%Y-%b-%d"))
+
+p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
+  geom_line(color = "#418186", alpha = 0.7, aes(text = paste0("Date: ", date, "<br>Rain: ", precipitation, " mm"))) +
+  theme_minimal() +
+  labs(title = "Average Rainfall Patterns in Botswana (2003 - 2023)",
+       x = "Year", y = "Precipitation (mm)",
+       color = "Year") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 14),
+    axis.title.x = element_text(size = 8, face = "bold.italic"),
+    axis.title.y.left = element_text(size = 8, face = "bold.italic"),
+    axis.title.y.right = element_text(size = 8, face = "bold.italic"),
+    legend.position = "none")
+
+# Convert to interactive plot
+ggplotly(p, tooltip = "text")
+
 ```
