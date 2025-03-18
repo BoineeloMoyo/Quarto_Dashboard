@@ -164,4 +164,28 @@ data <- data |>
 # Calculate the maximum measurement for the background bars
 max_measurement <- max(data$Measurement)
 
+
+# Create ggplot
+p <- ggplot(data, aes(x = Month, y = Measurement, fill = Fill_Color, text = 
+paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
+  geom_col(aes(y = max_measurement), fill = "gray90", width = 0.8) + #here we create the nice background gray bars
+  geom_col(aes(fill = Fill_Color), width = 0.6) +
+  scale_fill_identity() +  # Use pre-defined colors
+  theme_classic() +
+  labs(
+    title = "Botswana Absolute Annual Humidity",
+    x = "Month",
+    y = "Humidity in g/m³"
+  ) +
+  theme(
+    plot.title = element_text(family = "Helvetica", face = "bold", size = 12, hjust = 0.5, color = "#1e3435"),
+    axis.title = element_text(face = "bold.italic", size = 8),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "none", 
+    panel.background = element_rect(fill = "white"),
+    plot.background = element_rect(fill = "white")
+  )
+
+# Convert ggplot to plotly for interactivity
+ggplotly(p, tooltip = "text")
 ```
