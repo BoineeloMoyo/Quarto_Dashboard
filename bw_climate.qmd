@@ -106,6 +106,7 @@ htmltools::HTML(paste0(
 ### Row {height="40%" .tabset}
 
 ```{r heatmap}
+#| title: Average Max Temperatures
 teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
 temp <- read_csv("./data/high_temps.csv")
 temp_long <- temp |>
