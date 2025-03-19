@@ -1,14 +1,13 @@
-﻿Absolute humidity in g/m³;;;;;;
-;;;;;;
-Jan;13,80;;;;;
-Feb;14,00;;;;;
-Mar;12,70;;;;;
-Apr;10,00;;;;;
-May;7,70;;;;;
-Jun;6,10;;;;;
-Jul;5,80;;;;;
-Aug;5,70;;;;;
-Sep;6,70;;;;;
-Oct;8,80;;;;;
-Nov;11,20;;;;;
-Dec;12,80;;;;;
+﻿Month,Measurement
+Jan,13.8
+Feb,14
+Mar,12.7
+Apr,10
+May,7.7
+Jun,6.1
+Jul,5.8
+Aug,5.7
+Sep,6.7
+Oct,8.8
+Nov,11.2
+Dec,12.8
