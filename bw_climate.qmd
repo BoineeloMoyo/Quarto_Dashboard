@@ -158,6 +158,7 @@ ggplotly(p, tooltip = "text")
 
 ```
 ```{r humidity}
+#| title: Absolute Humidity
 # Load Data
 data <- read_csv("./data/humidity_BW.csv")
 
