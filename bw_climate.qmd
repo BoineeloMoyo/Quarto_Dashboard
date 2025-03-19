@@ -202,3 +202,6 @@ paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
 # Convert ggplot to plotly for interactivity
 ggplotly(p, tooltip = "text")
 ```
+```{r co2_emissions}
+
+```
