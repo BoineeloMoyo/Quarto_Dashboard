@@ -191,8 +191,8 @@ paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
     y = "Humidity in g/m³"
   ) +
   theme(
-    plot.title = element_text(family = "Helvetica", face = "bold", size = 12, hjust = 0.5, color = "#1e3435"),
-    axis.title = element_text(face = "bold.italic", size = 8),
+    plot.title = element_text(family = "Helvetica", face = "bold", size = 14, hjust = 0.5, color = "#1e3435"),
+    axis.title = element_text(face = "bold.italic", size = 9),
     axis.text.x = element_text(angle = 45, hjust = 1),
     legend.position = "none", 
     panel.background = element_rect(fill = "white"),
