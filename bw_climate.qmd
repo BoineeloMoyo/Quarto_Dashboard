@@ -103,53 +103,6 @@ htmltools::HTML(paste0(
 ```
 :::
 
-## Column {width="30%"}
-### Row {height=50%}
-
-```{r humidity}
-#| title: Absolute Humidity
-# Load Data
-data <- read_csv("./data/humidity_BW.csv")
-
-# Create an ordered factor for months
-month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-data$Month <- factor(data$Month, levels = month_order, ordered = TRUE)
-
-# Define your teal color palette (Darker = Higher Humidity)
-teals <- rev(c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf"))
-
-data <- data |> 
-  mutate(Fill_Color = cut(Measurement, breaks = 5, labels = teals, include.lowest = TRUE))
-
-# Calculate the maximum measurement for the background bars
-max_measurement <- max(data$Measurement)
-
-
-# Create ggplot
-p <- ggplot(data, aes(x = Month, y = Measurement, fill = Fill_Color, text = 
-paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
-  geom_col(aes(y = max_measurement), fill = "gray90", width = 0.8) + #here we create the nice background gray bars
-  geom_col(aes(fill = Fill_Color), width = 0.6) +
-  scale_fill_identity() +  # Use pre-defined colors
-  theme_classic() +
-  labs(
-    title = "Botswana Absolute Annual Humidity",
-    x = "Month",
-    y = "Humidity in g/m³"
-  ) +
-  theme(
-    plot.title = element_text(family = "Helvetica", face = "bold", size = 12, hjust = 0.5, color = "#1e3435"),
-    axis.title = element_text(face = "bold.italic", size = 8),
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.position = "none", 
-    panel.background = element_rect(fill = "white"),
-    plot.background = element_rect(fill = "white")
-  )
-
-# Convert ggplot to plotly for interactivity
-ggplotly(p, tooltip = "text")
-```
-
 ```{r heatmap}
 #| title: Average Max Temperatures
 teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
@@ -201,4 +154,50 @@ p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
 # Convert to interactive plot
 ggplotly(p, tooltip = "text")
 
+```
+## Column {width="30%"}
+### Row {height=50%}
+
+```{r humidity}
+#| title: Absolute Humidity
+# Load Data
+data <- read_csv("./data/humidity_BW.csv")
+
+# Create an ordered factor for months
+month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+data$Month <- factor(data$Month, levels = month_order, ordered = TRUE)
+
+# Define your teal color palette (Darker = Higher Humidity)
+teals <- rev(c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf"))
+
+data <- data |> 
+  mutate(Fill_Color = cut(Measurement, breaks = 5, labels = teals, include.lowest = TRUE))
+
+# Calculate the maximum measurement for the background bars
+max_measurement <- max(data$Measurement)
+
+
+# Create ggplot
+p <- ggplot(data, aes(x = Month, y = Measurement, fill = Fill_Color, text = 
+paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
+  geom_col(aes(y = max_measurement), fill = "gray90", width = 0.8) + #here we create the nice background gray bars
+  geom_col(aes(fill = Fill_Color), width = 0.6) +
+  scale_fill_identity() +  # Use pre-defined colors
+  theme_classic() +
+  labs(
+    title = "Botswana Absolute Annual Humidity",
+    x = "Month",
+    y = "Humidity in g/m³"
+  ) +
+  theme(
+    plot.title = element_text(family = "Helvetica", face = "bold", size = 12, hjust = 0.5, color = "#1e3435"),
+    axis.title = element_text(face = "bold.italic", size = 8),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "none", 
+    panel.background = element_rect(fill = "white"),
+    plot.background = element_rect(fill = "white")
+  )
+
+# Convert ggplot to plotly for interactivity
+ggplotly(p, tooltip = "text")
 ```
