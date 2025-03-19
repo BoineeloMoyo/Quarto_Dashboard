@@ -104,15 +104,8 @@ htmltools::HTML(paste0(
 ```{r heatmap}
 # Read the CSV file
 temps <- read_excel("data/avg_monthly_high_temps.xlsx")
-# Trim any leading or trailing spaces
-temps[] <- lapply(temps, function(x) trimws(x))
+heatmap(temps)
 
-# Replace commas with dots and convert to numeric
-temps[] <- lapply(temps, function(x) as.numeric(gsub(",", ".", x)))
-
-# Convert to a numeric matrix
-temps_matrix <- as.matrix(temps)
-temps_matrix
 ```
 
 ```{r rainfall patterns}
