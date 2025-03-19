@@ -103,6 +103,7 @@ htmltools::HTML(paste0(
 ```
 :::
 
+### Column
 ```{r heatmap}
 #| title: Average Max Temperatures
 teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
@@ -129,7 +130,7 @@ p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text =
 
 ggplotly(p, tooltip = "text")
 ```
-### Row
+
 ```{r rainfall}
 #| title: Average Rainfall patterns
 #| 
