@@ -103,61 +103,9 @@ htmltools::HTML(paste0(
 ```
 :::
 
-## Column {width="70%"}
-### Row
+## Column {width="30%"}
+### Row {height=50%}
 
-```{r heatmap}
-#| title: Average Max Temperatures
-teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
-temp <- read_csv("./data/high_temps.csv")
-temp_long <- temp |>
-  pivot_longer(cols = -Districts, names_to = "Month", values_to = "Temperature")
-
-# Create an ordered factor for months
-month_order <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-temp_long$Month <- factor(temp_long$Month, levels = month_order, ordered = TRUE)
-p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text = 
-    paste("Temp:", Temperature, "°C", "<br>District: ", Districts, "<br>Month: ", Month))) +
-  geom_tile() +
-  scale_fill_gradient2(low = "#abcbcf", mid = "#418186", high = "#1e3435", midpoint = mean(temp_long$Temperature)) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-  plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 12),
-  axis.title = element_text(family = "Roboto", face = "bold", size = 10),
-  axis.text = element_text(family = "Roboto", size = 8)) +
-  labs(title = "Average Monthly Maximumn Temperatures (°C) of Botswana Districts",
-       x = "Month",
-       y = "District",
-       fill = "Temperature (°C)")
-
-ggplotly(p, tooltip = "text")
-```
-### Row
-```{r rainfall}
-#| title: Average Rainfall patterns
-#| 
-df <- read_csv("./data/bw_rainfall.csv")
-# Convert month and year into a proper date format
-df <- df |>
-  mutate(date = as.Date(paste(year, month, sep = "-"), format = "%Y-%b-%d"))
-
-p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
-  geom_line(color = "#418186", alpha = 0.7, aes(text = paste0("Date: ", date, "<br>Rain: ", precipitation, " mm"))) +
-  theme_minimal() +
-  labs(title = "Average Rainfall Patterns in Botswana (2003 - 2023)",
-       x = "Year", y = "Precipitation (mm)",
-       color = "Year") +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 14),
-    axis.title.x = element_text(size = 8, face = "bold.italic"),
-    axis.title.y.left = element_text(size = 8, face = "bold.italic"),
-    axis.title.y.right = element_text(size = 8, face = "bold.italic"),
-    legend.position = "none")
-
-# Convert to interactive plot
-ggplotly(p, tooltip = "text")
-
-```
 ```{r humidity}
 #| title: Absolute Humidity
 # Load Data
