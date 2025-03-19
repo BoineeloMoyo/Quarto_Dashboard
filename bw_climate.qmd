@@ -11,7 +11,7 @@ format:
 
 if (!requireNamespace("install.load", quietly = TRUE)) 
   install.packages("install.load")
-install.load::install_load("shiny","quarto", "gt", "scales", "readr", "dplyr", "knitr", "ggplot2", "ggrepel",  "kableExtra", "htmltools")
+install.load::install_load("plotly","quarto", "gt", "scales", "readr", "dplyr", "knitr", "ggplot2", "ggrepel",  "kableExtra", "htmltools")
 ```
 
 ```{r setup}
@@ -26,6 +26,7 @@ library(scales)
 library(kableExtra)
 library(htmltools)
 library(readr) 
+library(plotly) 
 ```
 #  {.sidebar}
 
@@ -106,7 +107,7 @@ htmltools::HTML(paste0(
 
 ```{r heatmap}
 teals <- c("#1e3435", "#2d5e5b","#418186", "#77aeb2","#abcbcf")
-temp <- read_csv("~/data/high_temps.csv")
+temp <- read_csv("./data/high_temps.csv")
 temp_long <- temp |>
   pivot_longer(cols = -Districts, names_to = "Month", values_to = "Temperature")
 
