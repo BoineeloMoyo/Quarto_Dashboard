@@ -148,8 +148,8 @@ p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 14),
     axis.title.x = element_text(size = 8, face = "bold.italic"),
-    axis.title.y.left = element_text(size = 8, face = "bold.italic"),
-    axis.title.y.right = element_text(size = 8, face = "bold.italic"),
+    axis.title.y.left = element_text(size = 10, face = "bold.italic"),
+    axis.title.y.right = element_text(size = 10, face = "bold.italic"),
     legend.position = "none")
 
 # Convert to interactive plot
