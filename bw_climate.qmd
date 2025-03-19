@@ -103,7 +103,8 @@ htmltools::HTML(paste0(
 ```
 :::
 
-### Row {height="40%" .tabset}
+## Column {width="70%"}
+### Row
 
 ```{r heatmap}
 #| title: Average Max Temperatures
@@ -131,7 +132,7 @@ p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text =
 
 ggplotly(p, tooltip = "text")
 ```
-
+### Row
 ```{r rainfall}
 #| title: Average Rainfall patterns
 #| 
