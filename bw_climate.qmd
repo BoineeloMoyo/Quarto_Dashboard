@@ -133,6 +133,8 @@ ggplotly(p, tooltip = "text")
 ```
 
 ```{r rainfall}
+#| title: Average Rainfall patterns
+#| 
 df <- read_csv("./data/bw_rainfall.csv")
 # Convert month and year into a proper date format
 df <- df |>
