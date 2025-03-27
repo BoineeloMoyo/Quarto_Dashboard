@@ -204,4 +204,35 @@ ggplotly(p, tooltip = "text")
 ```
 ```{r co2_emissions}
 
+library(plotly)
+
+# Define data
+sectors <- c("Land use", "Agriculture", "Energy", "Waste", "Industrial Processes")
+amounts <- c(41.1, 14.2, 6.5, 0.2694, 0.2247)  # in millions
+colors <- c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf")
+
+# Calculate percentages
+total <- sum(amounts)
+percentages <- (amounts / total) * 100
+labels <- paste0(sectors, "<br>", amounts, "m (", sprintf("%.1f%%", percentages), ")")
+
+# Create interactive Plotly Donut Chart
+donut_plotly <- plot_ly(
+  labels = sectors, 
+  values = amounts, 
+  textinfo = "label+percent", 
+  text = labels, 
+  hoverinfo = "text",
+  marker = list(colors = colors),
+  hole = 0.5,  # Creates the donut effect
+  type = "pie"
+) %>%
+  layout(
+    title = list(text = "Botswana Green House Gas Emissions by 2021", x = 0.5),
+    showlegend = TRUE
+  )
+
+# Show the interactive chart
+donut_plotly
+
 ```
