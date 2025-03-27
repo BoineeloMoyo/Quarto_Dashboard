@@ -216,6 +216,7 @@ total <- sum(amounts)
 percentages <- (amounts / total) * 100
 labels <- paste0(sectors, "<br>", amounts, "m (", sprintf("%.1f%%", percentages), ")")
 
+
 # Create interactive Plotly Donut Chart
 donut_plotly <- plot_ly(
   labels = sectors, 
@@ -228,8 +229,19 @@ donut_plotly <- plot_ly(
   type = "pie"
 ) %>%
   layout(
-    title = list(text = "Botswana Green House Gas Emissions by 2021", x = 0.5),
-    showlegend = TRUE
+    title = list(
+      text = htmltools::HTML("Greenhouse Gas Emissions by Sector in Botswana<br><span style='font-size:14px;'>in metric tonnes of CO<sub>2</sub></span>"), 
+      x = 0.5
+    ),
+    showlegend = TRUE,
+    annotations = list(
+      list(
+        x = 0.5, y = 0.5,  # Centered in the donut hole
+        text = "CO<sub>2</sub>",  # Adds subscript 2
+        showarrow = FALSE,
+        font = list(size = 22, color = "black")  # Adjust font size & color
+      )
+    )
   )
 
 # Show the interactive chart
