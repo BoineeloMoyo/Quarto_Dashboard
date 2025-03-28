@@ -11,7 +11,7 @@ format:
 
 if (!requireNamespace("install.load", quietly = TRUE)) 
   install.packages("install.load")
-install.load::install_load("plotly","quarto", "gt", "scales", "readr", "dplyr", "knitr", "ggplot2", "ggrepel",  "kableExtra", "htmltools")
+install.load::install_load("plotly","quarto", "gt", "scales", "readr", "dplyr", "knitr", "ggplot2", "ggrepel",  "kableExtra", "htmltools", "echarts4r")
 ```
 
 ```{r setup}
@@ -53,7 +53,6 @@ More information about how we are worsening our climate change challenges and im
 ### Row {height=30%}
 
 ```{r total_sunshine_card}
-library(plotly)
 
 # Define the custom color palette
 base_color <- "#345e67"  # Color for all ranges
@@ -112,7 +111,7 @@ library(echarts4r)
 hazards <- data.frame(
   Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
   Percentage = c(55.56, 22.22, 16.67, 5.56),
-  Color = c("#1e3435", "#2d5e5b", "#418186", "77aeb2")  # Custom colors
+  Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2")
 )
 
 # Create the chart
@@ -120,11 +119,14 @@ hazards |>
   e_charts(Hazard) |>
   e_pie(Percentage, 
         radius = c("50%", "70%"),  
-        label = list(show = TRUE), # Hide default labels
+        label = list(show = TRUE), 
         itemStyle = list(borderRadius = 10)) |>
-  e_tooltip(trigger = "item") |>
+  e_tooltip(
+    trigger = "item",
+    formatter = "{b}: {c}%") |>
   e_color(hazards$Color) |> 
   e_title("Botswana Natural Hazard Occurrence") |> 
+  e_legend(show = FALSE) |>
   # e_legend(orient = "vertical", right = "8%") |>
   e_text_style(fontSize = 14, fontWeight = "bold")
 ```
