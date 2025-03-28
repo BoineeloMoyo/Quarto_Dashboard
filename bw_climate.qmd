@@ -109,28 +109,28 @@ htmltools::HTML(paste0(
 ```{r hazards}
 library(echarts4r)
 
-# Create data
-hazards <- data.frame(
-  Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
-  Percentage = c(55.56, 22.22, 16.67, 5.56),
-  Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2")
-)
+# # Create data
+# hazards <- data.frame(
+#   Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
+#   Percentage = c(55.56, 22.22, 16.67, 5.56),
+#   Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2")
+# )
 
-# Create the chart
-hazards |>
-  e_charts(Hazard) |>
-  e_pie(Percentage, 
-        radius = c("50%", "70%"),  
-        label = list(show = TRUE), 
-        itemStyle = list(borderRadius = 10)) |>
-  e_tooltip(
-    trigger = "item",
-    formatter = "{b}: {c}%") |>
-  e_color(hazards$Color) |> 
-  e_title("Botswana Natural Hazard Occurrence") |> 
-  e_legend(show = FALSE) |>
-  # e_legend(orient = "vertical", right = "8%") |>
-  e_text_style(fontSize = 14, fontWeight = "bold")
+# # Create the chart
+# hazards |>
+#   e_charts(Hazard) |>
+#   e_pie(Percentage, 
+#         radius = c("50%", "70%"),  
+#         label = list(show = TRUE), 
+#         itemStyle = list(borderRadius = 10)) |>
+#   e_tooltip(
+#     trigger = "item",
+#     formatter = "{b}: {c}%") |>
+#   e_color(hazards$Color) |> 
+#   e_title("Botswana Natural Hazard Occurrence") |> 
+#   e_legend(show = FALSE) |>
+#   # e_legend(orient = "vertical", right = "8%") |>
+#   e_text_style(fontSize = 14, fontWeight = "bold")
 ```
 
 ### Column
