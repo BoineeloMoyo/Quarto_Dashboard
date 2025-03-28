@@ -65,7 +65,7 @@ gauge_chart <- plot_ly(
   value = 3436,  
   title = list(
     text = "BW Total Hours of Sunshine",
-    font = list(size = 34, color = title_color, family = "Roboto", bold = TRUE) 
+    font = list(size = 26, color = title_color, family = "Roboto", bold = TRUE) 
   ),
   gauge = list(
     axis = list(range = c(840, 3800)), 
@@ -92,7 +92,7 @@ htmltools::HTML(paste0(
 ```
 :::
 
-::: {.valuebox icon="arrow-up" color="light"}
+::: {.valuebox icon="graph-up" color="light"}
 ```{r annual_inc}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
