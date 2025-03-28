@@ -34,13 +34,15 @@ This dashboard displays the following:
 
 | **Details** |
 |------------|
-| A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and vegetation growth. *Lieferung*  |  
-| **Data Sources:**  * World Bank's [Climate Knowledge Portal](https://climateknowledgeportal.worldbank.org/country/botswana/vulnerability),  
+| A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and vegetation growth.  |  
+| **Data Sources:**  
+* [World Bank's Climate Knowledge Portal](https://climateknowledgeportal.worldbank.org/country/botswana/vulnerability)  
 * [Emissions Index](https://www.emission-index.com/countries/botswana)
 * [Statistics Botswana](https://www.statsbots.org.bw/sites/default/files/publications/Botswana%20Environment%20Natural%20Disaster%20Digest_2017.pdf) 
 * [World Data](https://www.emission-index.com/countries/botswana)|  
+
 | **Date:**    `r Sys.Date()`  |  
-| **Author:**   | **Boineelo Moyo**|   
+| **Author:**  **Boineelo Moyo**|   
 ::: {.callout-note collapse="true"}
 
 ## Further-Information
