@@ -125,7 +125,7 @@ hazards |>
   e_tooltip(trigger = "item") |>
   e_color(hazards$Color) |> 
   e_title("Botswana Natural Hazard Occurrence") |> 
-  e_legend(orient = "vertical", right = "8%") |>
+  # e_legend(orient = "vertical", right = "8%") |>
   e_text_style(fontSize = 14, fontWeight = "bold")
 ```
 
