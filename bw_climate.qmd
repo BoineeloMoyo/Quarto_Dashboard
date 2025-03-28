@@ -105,6 +105,29 @@ htmltools::HTML(paste0(
 ))
 ```
 :::
+```{r avr_temp}
+library(echarts4r)
+
+# Create data
+hazards <- data.frame(
+  Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
+  Percentage = c(55.56, 22.22, 16.67, 5.56),
+  Color = c("#C71585", "#FFC107", "#6A0DAD", "#FFB6C1")  # Custom colors
+)
+
+# Create the chart
+hazards |>
+  e_charts(Hazard) |>
+  e_pie(Percentage, 
+        radius = c("50%", "70%"),  # Inner radius for a donut effect
+        label = list(show = FALSE), # Hide default labels
+        itemStyle = list(borderRadius = 10)) |>
+  e_tooltip(trigger = "item") |>
+  e_color(hazards$Color) |>  # Apply custom colors
+  e_title("Natural Hazard Occurrence") |> 
+  e_legend(orient = "vertical", right = "10%") |>
+  e_text_style(fontSize = 16, fontWeight = "bold")
+```
 
 ### Column
 ```{r heatmap}
