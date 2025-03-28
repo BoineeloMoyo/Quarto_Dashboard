@@ -55,32 +55,41 @@ More information about how we are worsening our climate change challenges and im
 ### Row {height=30%}
 
 ```{r total_sunshine_card}
-
 library(echarts4r)
 
-# Create the gauge chart
-data.frame(value = 3436) |>
-  e_charts() |>
-  e_gauge(value, 
-          min = 840, max = 3800, 
-          name = "Total Hours of Sunshine", 
-          title = list(fontSize = 18, color = "#182b33"), 
+# e_charts() |> 
+#   e_gauge(41, "PERCENT") |> 
+#   e_title("Gauge")
+library(echarts4r)
+
+e_charts() |> 
+  e_gauge(3436, "Total Hours", 
+          min = 0, max = 4000, 
           axisLine = list(
             lineStyle = list(
               width = 15, 
               color = list(
-                c(0.5, "#345e67"),  # Base color
-                c(1, "#9ed8d3")   # Threshold color
+                c(0.25, "#1e3435"),  # First half range
+                c(0.5, "#2d5e5b"), 
+                c(1, "#418186"),
+                c(1.5, "#77aeb2")
               )
             )
           ), 
+          pointer = list(
+            itemStyle = list(
+              color = "#345e67"  # Change pointer color to match the theme
+            )
+          ),
           detail = list(
             formatter = "{value} hrs", 
             fontSize = 16, 
             color = "#538586"
           )) |>
   e_title("BW Total Hours of Sunshine", left = "center", top = "10%") |> 
-  e_tooltip()  # Adds a hover tooltip for extra interaction
+  e_tooltip()
+
+
 
 ```
 ::: {.valuebox icon="thermometer-half" color="light"}
