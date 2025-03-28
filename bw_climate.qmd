@@ -5,7 +5,9 @@ format:
     orientation: columns
     nav-buttons: [github]
     github: https://github.com/BoineeloMoyo/Quarto_Dashboard/
+output-dir: "_site"
 ---
+
 
 ```{r setup_pkgs, include=FALSE}
 
