@@ -119,11 +119,11 @@ hazards <- data.frame(
 hazards |>
   e_charts(Hazard) |>
   e_pie(Percentage, 
-        radius = c("50%", "70%"),  # Inner radius for a donut effect
-        label = list(show = FALSE), # Hide default labels
+        radius = c("50%", "70%"),  
+        label = list(show = TRUE), # Hide default labels
         itemStyle = list(borderRadius = 10)) |>
   e_tooltip(trigger = "item") |>
-  e_color(hazards$Color) |>  # Apply custom colors
+  e_color(hazards$Color) |> 
   e_title("Botswana Natural Hazard Occurrence") |> 
   e_legend(orient = "vertical", right = "8%") |>
   e_text_style(fontSize = 14, fontWeight = "bold")
