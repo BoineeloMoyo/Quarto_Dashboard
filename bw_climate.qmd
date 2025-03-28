@@ -32,12 +32,12 @@ library(plotly)
 
 This dashboard displays the following:
 
-| **Field**     | **Details** |
-|--------------|------------|
-| **Purpose**  | A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and vegetation growth. *Lieferung*  |  
-| **Data Sources** | Botswana Power Corporation,  World Bank, Statistics Botswana, **Lieferodner checks** ->  |  
-| **Date**     | `r Sys.Date()`  |  
-| **Author**   | `r Sys.info()["user"]` |   
+| **Details** |
+|------------|
+| A summary of Botswana's climate change status quo, taking into account land surface temperatures, green house gas emissions (GHG), rainfall patterns and vegetation growth. *Lieferung*  |  
+| **Data Sources:**  Botswana Power Corporation,  World Bank, Statistics Botswana, **Lieferodner checks** ->  |  
+| **Date:**    `r Sys.Date()`  |  
+| **Author:**   | **Boineelo Moyo**|   
 ::: {.callout-note collapse="true"}
 
 ## Further-Information
