@@ -233,7 +233,7 @@ donut_plotly <- plot_ly(
 ) %>%
   layout(
     title = list(
-      text = htmltools::HTML("Greenhouse Gas Emissions CO<sub>2</sub></span> by Sector in Botswana<br><span style='font-size:12px;'> "), 
+      text = "Greenhouse Gas Emissions CO<sub>2</sub></span> by Sector in Botswana<br><span style='font-size:12px;'> "), 
       x = 0.5
     ),
     showlegend = FALSE,
