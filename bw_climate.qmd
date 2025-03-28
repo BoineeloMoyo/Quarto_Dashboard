@@ -56,34 +56,32 @@ More information about how we are worsening our climate change challenges and im
 
 ```{r total_sunshine_card}
 
-# Define the custom color palette
-base_color <- "#345e67"  # Color for all ranges
-threshold_color <- "#9ed8d3"
-title_color <- "#182b33"  # Title color
-value_color <- "#538586" 
+library(echarts4r)
 
-# Create the interactive gauge chart for total hours of sunshine
-gauge_chart <- plot_ly(
-  type = "indicator",
-  mode = "gauge+number+delta",
-  value = 3436,  
-  title = list(
-    text = "BW Total Hours of Sunshine",
-    font = list(size = 26, color = title_color, family = "Roboto", bold = TRUE) 
-  ),
-  gauge = list(
-    axis = list(range = c(840, 3800)), 
-    steps = list(
-      list(range = c(840, 3800), color = base_color) 
-    ),
-    threshold = list(
-      line = list(color = threshold_color, width = 4),  
-      fillcolor = "#d1e1e4",  
-      value = 3436  
-    )
-  )
-)
-gauge_chart
+# Create the gauge chart
+data.frame(value = 3436) |>
+  e_charts() |>
+  e_gauge(value, 
+          min = 840, max = 3800, 
+          name = "Total Hours of Sunshine", 
+          title = list(fontSize = 18, color = "#182b33"), 
+          axisLine = list(
+            lineStyle = list(
+              width = 15, 
+              color = list(
+                c(0.5, "#345e67"),  # Base color
+                c(1, "#9ed8d3")   # Threshold color
+              )
+            )
+          ), 
+          detail = list(
+            formatter = "{value} hrs", 
+            fontSize = 16, 
+            color = "#538586"
+          )) |>
+  e_title("BW Total Hours of Sunshine", left = "center", top = "10%") |> 
+  e_tooltip()  # Adds a hover tooltip for extra interaction
+
 ```
 ::: {.valuebox icon="thermometer-half" color="light"}
 ```{r avr_temp}
@@ -109,35 +107,11 @@ htmltools::HTML(paste0(
 ```{r hazards}
 library(echarts4r)
 
-# # Create data
-# hazards <- data.frame(
-#   Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
-#   Percentage = c(55.56, 22.22, 16.67, 5.56),
-#   Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2")
-# )
-
-# # Create the chart
-# hazards |>
-#   e_charts(Hazard) |>
-#   e_pie(Percentage, 
-#         radius = c("50%", "70%"),  
-#         label = list(show = TRUE), 
-#         itemStyle = list(borderRadius = 10)) |>
-#   e_tooltip(
-#     trigger = "item",
-#     formatter = "{b}: {c}%") |>
-#   e_color(hazards$Color) |> 
-#   e_title("Botswana Natural Hazard Occurrence") |> 
-#   e_legend(show = FALSE) |>
-#   # e_legend(orient = "vertical", right = "8%") |>
-#   e_text_style(fontSize = 14, fontWeight = "bold")
-library(echarts4r)
-
 # Create data
 hazards <- data.frame(
   Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
   Percentage = c(55.56, 22.22, 16.67, 5.56),
-  Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2")  # Corrected colors
+  Color = c("#1e3435", "#2d5e5b", "#418186", "#77aeb2") 
 )
 
 # Create the chart
@@ -145,15 +119,17 @@ hazards |>
   e_charts(Hazard) |>
   e_pie(Percentage, 
         radius = c("50%", "70%"),  
-        label = list(show = TRUE),  # Keep default labels
+        label = list(show = TRUE),  
         itemStyle = list(borderRadius = 10)) |>
   e_tooltip(
     trigger = "item",
-    formatter = "{b}: {c}%"  # Adds % sign to tooltip
+    formatter = htmlwidgets::JS("function(params) {
+      return params.name + ': ' + params.value + '%';
+    }")
   ) |>
-  e_color(hazards$Color) |>  # Apply corrected colors
+  e_color(hazards$Color) |>  
   e_title("Botswana Natural Hazard Occurrence") |> 
-  e_legend(show = FALSE) |>  # Ensure legend is removed
+  e_legend(show = FALSE) |>  
   e_text_style(fontSize = 14, fontWeight = "bold")
 
 ```
