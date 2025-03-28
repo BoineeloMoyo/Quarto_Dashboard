@@ -105,7 +105,7 @@ htmltools::HTML(paste0(
 ))
 ```
 :::
-```{r avr_temp}
+```{r hazards}
 library(echarts4r)
 
 # Create data
