@@ -32,13 +32,10 @@ library(plotly)
 
 This dashboard displays the following:
 
-| ***Dashboard Overview:**|
+| **Dashboard Overview:**|
 |------------|
-| This interactive dashboard offers a comprehensive visualization of Botswana's climate metrics, providing key insights into the country's climate status. It highlights essential factors such as temperatures trends, greenhouse gas emissions (GHG), rainfall patterns,humidity, and natural hazards occurence likelihood, enabling users to better understand the broader climate trends affecting Botswana. 
+| This interactive dashboard offers a comprehensive visualization of Botswana's climate metrics, providing key insights into the country's climate status. It highlights essential factors such as temperature trends, greenhouse gas emissions (GHG), rainfall patterns, humidity, and natural hazards occurence likelihood, enabling users to better understand the broader climate trends affecting Botswana. By providing these visualizations, the dashboard serves as a tool for climate-related decision-making, research, and public awareness, offering valuable insights into Botswana’s current climate situation. 
 
-The dashboard is designed to present a clear and concise overview of how these variables interact, showcasing the country’s climate conditions and trends over time. It draws upon authoritative data sources listed below, ensuring that users have access to reliable and up-to-date information.
-
-By providing these visualizations, the dashboard serves as a tool for climate-related decision-making, research, and public awareness, offering valuable insights into Botswana’s current climate situation and future projections.  |  
 | **Data Sources:**  
 * [World Bank's Climate Knowledge Portal](https://climateknowledgeportal.worldbank.org/country/botswana/vulnerability)  
 * [Emissions Index](https://www.emission-index.com/countries/botswana)
