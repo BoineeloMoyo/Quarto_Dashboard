@@ -82,7 +82,7 @@ e_charts() |>
             fontSize = 16, 
             color = "#538586"
           )) |>
-  e_title("BW Total Hours of Sunshine", left = "center", top = "8%") |> 
+  e_title("BW Total Hours of Sunshine", left = "center", top = "4%") |> 
   e_tooltip()
 
 ```
