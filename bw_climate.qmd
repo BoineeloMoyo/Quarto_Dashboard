@@ -55,11 +55,7 @@ More information about how we are worsening our climate change challenges and im
 ### Row {height=30%}
 
 ```{r total_sunshine_card}
-library(echarts4r)
 
-# e_charts() |> 
-#   e_gauge(41, "PERCENT") |> 
-#   e_title("Gauge")
 library(echarts4r)
 
 e_charts() |> 
@@ -86,10 +82,8 @@ e_charts() |>
             fontSize = 16, 
             color = "#538586"
           )) |>
-  e_title("BW Total Hours of Sunshine", left = "center", top = "10%") |> 
+  e_title("BW Total Hours of Sunshine", left = "center", top = "8%") |> 
   e_tooltip()
-
-
 
 ```
 ::: {.valuebox icon="thermometer-half" color="light"}
