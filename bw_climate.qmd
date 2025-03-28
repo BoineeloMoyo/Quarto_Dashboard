@@ -235,7 +235,7 @@ donut_plotly <- plot_ly(
     title = list(
       text = "Greenhouse Gas Emissions CO<sub>2</sub> by Sector in Botswana", 
       x = 0.5,
-      font = list(size = 22, color = "#1e3435") 
+      font = list(size = 14, color = "#1e3435") 
     ),
     showlegend = FALSE,
     annotations = list(
