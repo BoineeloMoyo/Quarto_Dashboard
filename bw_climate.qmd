@@ -157,7 +157,7 @@ ggplotly(p, tooltip = "text")
 
 ```
 ## Column {width="30%"}
-### Row {height=60%}
+### Row {height=50%}
 
 ```{r humidity}
 #| title: Absolute Humidity
@@ -203,7 +203,7 @@ paste("Month: ", Month, "<br>Humudity: ", Measurement, "g/m³"))) +
 ggplotly(p, tooltip = "text")
 ```
 
-### Row {height=40%}
+### Row {height=50%}
 ```{r co2_emissions}
 
 library(plotly)
