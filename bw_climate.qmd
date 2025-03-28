@@ -112,7 +112,7 @@ library(echarts4r)
 hazards <- data.frame(
   Hazard = c("Flood", "Drought", "Epidemic", "Storm"),
   Percentage = c(55.56, 22.22, 16.67, 5.56),
-  Color = c("#1e3435", "#2d5e5b", "#418186", "abcbcf")  # Custom colors
+  Color = c("#1e3435", "#2d5e5b", "#418186", "77aeb2")  # Custom colors
 )
 
 # Create the chart
@@ -125,7 +125,7 @@ hazards |>
   e_tooltip(trigger = "item") |>
   e_color(hazards$Color) |>  # Apply custom colors
   e_title("Botswana Natural Hazard Occurrence") |> 
-  e_legend(orient = "vertical", right = "14%") |>
+  e_legend(orient = "vertical", right = "8%") |>
   e_text_style(fontSize = 14, fontWeight = "bold")
 ```
 
