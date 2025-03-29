@@ -44,7 +44,7 @@ This dashboard displays the following:
 * [World Data](https://www.worlddata.info/africa/botswana/climate.php) 
 
 | **Date:**    `r Sys.Date()`   
-| **Author:**  **Boineelo Moyo**   
+| **Author:**  [**Boineelo Moyo**](https://boineelomoyo.github.io/Portfolio/)   
 
 ::: {.callout-note collapse="true"}
 ## Further-Information
