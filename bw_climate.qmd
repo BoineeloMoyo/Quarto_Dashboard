@@ -279,7 +279,7 @@ donut_plotly <- plot_ly(
         x = 0.5, y = 0.5,  
         text = "CO<sub>2</sub>", 
         showarrow = FALSE,
-        font = list(family = "Helvetica", face = "bold", size = 14, hjust = 0.5, color = "#1e3435")  # Adjust font size & color
+        font = list(family = "Helvetica", face = "bold", size = 14, hjust = 0.5, color = "#1e3435")  
       )
     )
   )
