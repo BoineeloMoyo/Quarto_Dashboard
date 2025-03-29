@@ -276,8 +276,8 @@ donut_plotly <- plot_ly(
     showlegend = FALSE,
     annotations = list(
       list(
-        x = 0.5, y = 0.5,  # Centered in the donut hole
-        text = "CO<sub>2</sub>",  # Adds subscript 2
+        x = 0.5, y = 0.5,  
+        text = "CO<sub>2</sub>", 
         showarrow = FALSE,
         font = list(family = "Helvetica", face = "bold", size = 14, hjust = 0.5, color = "#1e3435")  # Adjust font size & color
       )
