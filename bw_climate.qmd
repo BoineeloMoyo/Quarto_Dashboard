@@ -7,7 +7,6 @@ format:
     github: https://github.com/BoineeloMoyo/Quarto_Dashboard/
 ---
 
-
 ```{r setup_pkgs, include=FALSE}
 
 if (!requireNamespace("install.load", quietly = TRUE)) 
@@ -255,7 +254,6 @@ total <- sum(amounts)
 percentages <- (amounts / total) * 100
 labels <- paste0(sectors, "<br>", amounts, "m (", sprintf("%.1f%%", percentages), ")")
 
-
 # Create interactive Plotly Donut Chart
 donut_plotly <- plot_ly(
   labels = sectors, 
@@ -286,5 +284,4 @@ donut_plotly <- plot_ly(
 
 # Show the interactive chart
 donut_plotly
-
 ```
