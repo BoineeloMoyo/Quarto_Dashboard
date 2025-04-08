@@ -288,3 +288,12 @@ donut_plotly
 # Climate Trends {orientation="columns"}
 
 ##River Chart of Annual Emissions by Sector 
+As an example
+dates <- seq.Date(Sys.Date() - 30, Sys.Date(), by = "day")
+
+river <- data.frame(
+  dates = dates,
+  apples = runif(length(dates)),
+  bananas = runif(length(dates)),
+  pears = runif(length(dates))
+)
