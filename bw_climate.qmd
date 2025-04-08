@@ -297,3 +297,10 @@ river <- data.frame(
   bananas = runif(length(dates)),
   pears = runif(length(dates))
 )
+river |> 
+  e_charts(dates) |> 
+  e_river(apples) |> 
+  e_river(bananas) |> 
+  e_river(pears) |> 
+  e_tooltip(trigger = "axis") |> 
+  e_title("River charts", "(Streamgraphs)")
