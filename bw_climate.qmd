@@ -390,7 +390,8 @@ vulnerability_data %>%
   e_legend(show = FALSE)
 ```
 
-## Column {height=50%}
+## Column 
+### Row {height=50%}
 ```{r line}
 library(echarts4r)
 
@@ -407,7 +408,7 @@ df |>
   e_area(w) |> 
   e_title("Line and area charts")
 ```
-## Column {height=50%}
+### Row {height=50%}
 ```{r river}
 dates <- seq.Date(Sys.Date() - 30, Sys.Date(), by = "day")
 
