@@ -390,7 +390,7 @@ vulnerability_data %>%
   e_legend(show = FALSE)
 ```
 
-## Column {width=40%}
+## Column {height=50%}
 ```{r line}
 library(echarts4r)
 
@@ -406,4 +406,23 @@ df |>
   e_line(z) |> 
   e_area(w) |> 
   e_title("Line and area charts")
+```
+## Column {height=50%}
+```{r river}
+dates <- seq.Date(Sys.Date() - 30, Sys.Date(), by = "day")
+
+river <- data.frame(
+  dates = dates,
+  apples = runif(length(dates)),
+  bananas = runif(length(dates)),
+  pears = runif(length(dates))
+)
+
+river |> 
+  e_charts(dates) |> 
+  e_river(apples) |> 
+  e_river(bananas) |> 
+  e_river(pears) |> 
+  e_tooltip(trigger = "axis") |> 
+  e_title("River charts", "(Streamgraphs)")
 ```
