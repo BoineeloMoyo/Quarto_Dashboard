@@ -519,7 +519,7 @@ vulnerability_data %>%
   ) %>%
   e_legend(show = FALSE)
 ```
-### Row {height="40"}
+### Row {height="40%"}
 ```{r climate_test}
 library(echarts4r)
 # Data
