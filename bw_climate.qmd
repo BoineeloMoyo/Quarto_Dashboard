@@ -429,7 +429,7 @@ river |>
 ```
 
 ## Column {width=30%}
-### Row {height="30"}
+### Row {height="30%"}
 ```{r climate_adaptability}
 library(echarts4r)
 # Data
