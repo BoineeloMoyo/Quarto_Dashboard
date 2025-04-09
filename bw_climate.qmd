@@ -299,3 +299,175 @@ htmltools::HTML(paste0(
   "</div>"
 ))
 ```
+### Row {height=30%}
+```{r climate_vul}
+library(echarts4r)
+# Data
+vulnerability_data <- data.frame(
+  name = c("Score", "Remaining"),
+  value = c(3.6, 1.4)
+)
+
+# Pie Chart
+vulnerability_data %>%
+  e_charts(name) %>%
+  e_pie(
+    serie = value,
+    radius = c("45%", "75%"),
+    selectedMode = "multiple",
+    selectedOffset = 15,
+    label = list(
+      show = TRUE,
+      position = "center",
+      formatter = "3.6",
+      fontSize = 28,
+      fontWeight = "bold",
+      color = "#1e3435",
+      fontFamily = "Helvetica"
+    ),
+    labelLine = list(show = FALSE),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = "#fff",
+      borderWidth = 2
+    )
+  ) %>%
+  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  e_title(
+    text = "Botswana Vulnerability to Climate Hazards",
+    left = "center",
+    top = "top",
+    textStyle = list(
+      fontFamily = "Helvetica",
+      fontSize = 18
+    )
+  ) %>%
+  e_legend(show = FALSE)
+```
+### Row {height=40%}
+```{r climate_adapt}
+library(echarts4r)
+# Data
+vulnerability_data <- data.frame(
+  name = c("Score", "Remaining"),
+  value = c(3.6, 1.4)
+)
+
+# Pie Chart
+vulnerability_data %>%
+  e_charts(name) %>%
+  e_pie(
+    serie = value,
+    radius = c("45%", "75%"),
+    selectedMode = "multiple",
+    selectedOffset = 15,
+    label = list(
+      show = TRUE,
+      position = "center",
+      formatter = "3.6",
+      fontSize = 28,
+      fontWeight = "bold",
+      color = "#1e3435",
+      fontFamily = "Helvetica"
+    ),
+    labelLine = list(show = FALSE),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = "#fff",
+      borderWidth = 2
+    )
+  ) %>%
+  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  e_title(
+    text = "Botswana Vulnerability to Climate Hazards",
+    left = "center",
+    top = "top",
+    textStyle = list(
+      fontFamily = "Helvetica",
+      fontSize = 18
+    )
+  ) %>%
+  e_legend(show = FALSE)
+```
+
+## Column {width=40%}
+```{r line}
+library(echarts4r)
+
+df <- data.frame(
+  x = seq(50),
+  y = rnorm(50, 10, 3),
+  z = rnorm(50, 11, 2),
+  w = rnorm(50, 9, 2)
+)
+
+df |> 
+  e_charts(x) |> 
+  e_line(z) |> 
+  e_area(w) |> 
+  e_title("Line and area charts")
+```
+## Column {width=40%}
+```{r river}
+dates <- seq.Date(Sys.Date() - 30, Sys.Date(), by = "day")
+
+river <- data.frame(
+  dates = dates,
+  apples = runif(length(dates)),
+  bananas = runif(length(dates)),
+  pears = runif(length(dates))
+)
+
+river |> 
+  e_charts(dates) |> 
+  e_river(apples) |> 
+  e_river(bananas) |> 
+  e_river(pears) |> 
+  e_tooltip(trigger = "axis") |> 
+  e_title("River charts", "(Streamgraphs)")
+```
+## Column {width=30%}
+```{r climate_adaptability}
+library(echarts4r)
+# Data
+vulnerability_data <- data.frame(
+  name = c("Score", "Remaining"),
+  value = c(3.6, 1.4)
+)
+
+# Pie Chart
+vulnerability_data %>%
+  e_charts(name) %>%
+  e_pie(
+    serie = value,
+    radius = c("45%", "75%"),
+    selectedMode = "multiple",
+    selectedOffset = 15,
+    label = list(
+      show = TRUE,
+      position = "center",
+      formatter = "3.6",
+      fontSize = 28,
+      fontWeight = "bold",
+      color = "#1e3435",
+      fontFamily = "Helvetica"
+    ),
+    labelLine = list(show = FALSE),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = "#fff",
+      borderWidth = 2
+    )
+  ) %>%
+  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  e_title(
+    text = "Botswana Vulnerability to Climate Hazards",
+    left = "center",
+    top = "top",
+    textStyle = list(
+      fontFamily = "Helvetica",
+      fontSize = 18
+    )
+  ) %>%
+  e_legend(show = FALSE)
+```
