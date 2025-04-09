@@ -474,7 +474,7 @@ vulnerability_data %>%
   ) %>%
   e_legend(show = FALSE)
 ```
-### Row {height="30"}
+### Row {height="30%"}
 ```{r climate_sevr}
 library(echarts4r)
 # Data
