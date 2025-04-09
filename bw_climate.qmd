@@ -285,4 +285,7 @@ donut_plotly <- plot_ly(
 # Show the interactive chart
 donut_plotly
 ```
-# Climate Trends {orientation="columns"}
+
+# Climate Metrics {orientation="columns"}
+## Column {width="70%"}
+### Row {height=30%}
