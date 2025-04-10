@@ -364,7 +364,7 @@ vulnerability_data |>
     label = list(
       show = TRUE,
       position = "center",
-      formatter = "3.6",
+      formatter = "3.8",
       fontSize = 28,
       fontWeight = "bold",
       color = "#1e3435",
