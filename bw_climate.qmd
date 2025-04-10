@@ -93,7 +93,7 @@ e_charts() |>
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Average Temperature</p>",
-  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>", 24.5, "°C", "</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>", 24.5, "°C", "</p>",
   "</div>"
 ))
 ```
@@ -104,7 +104,7 @@ htmltools::HTML(paste0(
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Temperature Increase / annum</p>",
-  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>", "+", 2.1, "°C", "</p>",
+  "<p style='font-size:34px; color:#0a4541 font-weight:bold; font-family: Roboto;''>", "+", 2.1, "°C", "</p>",
   "</div>"
 ))
 ```
@@ -341,7 +341,7 @@ vulnerability_data |>
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Global GHG emissions in 2021</p>",
-  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>1.5%</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>1.5%</p>",
   "</div>"
 ))
 ```
@@ -484,7 +484,7 @@ vulnerability_data |>
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>CO2 Compund Annual Growth Rate (CAGR)</p>",
-  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>1.5%</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>1.5%</p>",
   "</div>"
 ))
 ```
