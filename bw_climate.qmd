@@ -108,8 +108,8 @@ htmltools::HTML(paste0(
   "</div>"
 ))
 ```
-
 :::
+
 ```{r hazards}
 library(echarts4r)
 
@@ -509,7 +509,7 @@ vulnerability_data |>
   ) |>
   e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
-    text = "Botswana Vulnerability to Climate Hazards",
+    text = "Botswana Lack of Coping Capacity",
     left = "center",
     top = "top",
     textStyle = list(
