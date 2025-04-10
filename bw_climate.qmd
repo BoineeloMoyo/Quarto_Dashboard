@@ -430,12 +430,12 @@ river |>
 
 ## Column {width=30%}
 ### Row {height="30%"}
-```{r climate_adaptability}
+```{r risk_indicator}
 library(echarts4r)
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
-  value = c(3.6, 1.4)
+  value = c(4, 1)
 )
 
 # Pie Chart
