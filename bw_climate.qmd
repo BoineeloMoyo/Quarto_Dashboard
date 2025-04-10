@@ -530,7 +530,7 @@ vulnerability_data <- data.frame(
 
 # Pie Chart
 vulnerability_data %>%
-  e_charts(name) %>%
+  e_charts(name) |>
   e_pie(
     serie = value,
     radius = c("45%", "75%"),
