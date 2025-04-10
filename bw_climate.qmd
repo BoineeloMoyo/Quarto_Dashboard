@@ -485,6 +485,7 @@ htmltools::HTML(paste0(
   "</div>"
 ))
 ```
+
 ### Row {height="30%"}
 ```{r coping_capa}
 #| label: Lack of Coping Capacity
