@@ -410,7 +410,8 @@ df |>
   e_title("Line and area charts")
 ```
 ### Row {height=50%}
-```{r river}
+```{r ghg_trends}
+#| title: Types of GHG emissions in Botswana
 dates <- seq.Date(Sys.Date() - 30, Sys.Date(), by = "day")
 
 river <- data.frame(
