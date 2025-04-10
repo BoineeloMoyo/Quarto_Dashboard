@@ -507,7 +507,7 @@ vulnerability_data %>%
       borderWidth = 2
     )
   ) %>%
-  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
     text = "Botswana Vulnerability to Climate Hazards",
     left = "center",
