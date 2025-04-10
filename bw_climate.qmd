@@ -432,7 +432,7 @@ river |>
 ## Column {width=30%}
 ### Row {height="30%"}
 ```{r risk_indicator}
-library(echarts4r)
+#| title: Climate Driven Risk Indicator
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
