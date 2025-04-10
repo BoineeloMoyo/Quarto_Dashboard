@@ -345,12 +345,12 @@ vulnerability_data |>
   e_legend(show = FALSE)
 ```
 ### Row {height=40%}
-```{r climate_adapt}
+```{r hazard_exposure}
 library(echarts4r)
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
-  value = c(3.6, 1.4)
+  value = c(3.8, 1.2)
 )
 
 # Pie Chart
@@ -379,7 +379,7 @@ vulnerability_data |>
   ) |>
   e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
-    text = "Botswana Vulnerability to Climate Hazards",
+    text = "Botswana Climate Driven Hazard & Exposure",
     left = "center",
     top = "top",
     textStyle = list(
