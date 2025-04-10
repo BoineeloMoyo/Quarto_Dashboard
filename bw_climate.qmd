@@ -516,7 +516,7 @@ vulnerability_data %>%
       fontFamily = "Helvetica",
       fontSize = 18
     )
-  ) %>%
+  ) |>
   e_legend(show = FALSE)
 ```
 ### Row {height="40%"}
