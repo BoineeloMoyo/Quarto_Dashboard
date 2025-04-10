@@ -347,7 +347,7 @@ vulnerability_data |>
 ```
 ### Row {height=40%}
 ```{r hazard_exposure}
-library(echarts4r)
+#| title: Climate-driven Hazard and Exposure (/5)
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
