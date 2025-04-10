@@ -464,7 +464,7 @@ vulnerability_data |>
   ) |>
   e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
-    text = "Botswana Vulnerability to Climate Hazards",
+    text = "Botswana Risk Indicator",
     left = "center",
     top = "top",
     textStyle = list(
