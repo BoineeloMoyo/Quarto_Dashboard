@@ -111,7 +111,7 @@ htmltools::HTML(paste0(
 :::
 
 ```{r hazards}
-library(echarts4r)
+#| title: Natural Hazard Occurance rate
 
 # Create data
 hazards <- data.frame(
@@ -335,7 +335,7 @@ vulnerability_data |>
   e_legend(show = FALSE)
 ```
 
-### Row {height="30%"}
+### Row {height=30%}
 ::: {.valuebox icon="emoji-surprise" color="light"}
 ```{r global_emms}
 htmltools::HTML(paste0(
@@ -345,7 +345,7 @@ htmltools::HTML(paste0(
   "</div>"
 ))
 ```
-
+:::
 ### Row {height=40%}
 ```{r hazard_exposure}
 #| title: Climate-driven Hazard and Exposure (/5)
