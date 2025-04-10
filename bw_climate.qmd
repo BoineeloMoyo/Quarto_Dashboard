@@ -246,7 +246,7 @@ library(plotly)
 
 # Define data
 sectors <- c("Land use", "Agriculture", "Energy", "Waste", "Industrial Processes")
-amounts <- c(41.1, 14.2, 6.5, 0.2694, 0.2247)  # in millions
+amounts <- c(41.1, 14.2, 6.5, 0.2694, 0.2247)  # in millions∏
 colors <- c("#1e3435", "#2d5e5b", "#418186", "#77aeb2", "#abcbcf")
 
 # Calculate percentages
@@ -338,7 +338,7 @@ vulnerability_data |>
 
 ### Row {height="30%"}
 ::: {.valuebox icon="emoji-surprise" color="light"}
-```{r annual_inc}
+```{r global_emms}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
   "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Global GHG emissions in 2021</p>",
