@@ -396,7 +396,7 @@ vulnerability_data |>
 ## Column 
 ### Row {height=50%}
 ```{r line}
-library(echarts4r)
+#| title: 
 
 df <- data.frame(
   x = seq(50),
@@ -435,7 +435,7 @@ river |>
 ## Column {width=30%}
 ### Row {height=30%}
 ```{r risk_indicator}
-#| title: Climate Driven Risk Indicator
+#| title: Climate Driven Risk Indicator (/5)
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
@@ -492,7 +492,7 @@ htmltools::HTML(paste0(
 
 ### Row {height=40%}
 ```{r coping_capa}
-#| title: Lack of Coping Capacity
+#| title: Lack of Coping Capacity (/5)
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
