@@ -337,7 +337,7 @@ vulnerability_data |>
 ```
 
 ### Row {height="30%"}
-::: {.valuebox icon="bar-chart" color="light"}
+::: {.valuebox icon="emoji-surprise" color="light"}
 ```{r annual_inc}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
