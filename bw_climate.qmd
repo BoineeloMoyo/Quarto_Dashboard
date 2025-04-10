@@ -289,17 +289,7 @@ donut_plotly
 # Climate Metrics {orientation="columns"}
 ## Column {width="30%"}
 ### Row {height=30%}
-```{r ghg_global}
-# Output the formatted text correctly
-library(htmltools)
-htmltools::HTML(paste0(
-  "<div style='text-align: center;'>",
-  "<p style='font-size:28px; color:#1F4E78; font-weight:bold;'>Global GHG emissions in 2021<: </p>",
-  "<p style='font-size:34px; color:#30658E; font-weight:bold;'>0.05%</p>",
-  "</div>"
-))
-```
-### Row {height=30%}
+
 ```{r climate_vul}
 #| title: Climate vulnerability (/5)
 #| 
@@ -345,6 +335,18 @@ vulnerability_data |>
   ) |>
   e_legend(show = FALSE)
 ```
+
+### Row {height="30%"}
+::: {.valuebox icon="bar-chart" color="light"}
+```{r annual_inc}
+htmltools::HTML(paste0(
+  "<div style='text-align: center;'>",
+  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>CO2 Compund Annual Growth Rate (CAGR)</p>",
+  "<p style='font-size:34px; color:#538586; font-weight:bold; font-family: Roboto;''>1.5%</p>",
+  "</div>"
+))
+```
+
 ### Row {height=40%}
 ```{r hazard_exposure}
 #| title: Climate-driven Hazard and Exposure (/5)
