@@ -301,7 +301,8 @@ htmltools::HTML(paste0(
 ```
 ### Row {height=30%}
 ```{r climate_vul}
-library(echarts4r)
+#| title: Climate vulnerability (/5)
+#| 
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
