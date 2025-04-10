@@ -264,7 +264,7 @@ donut_plotly <- plot_ly(
   marker = list(colors = colors),
   hole = 0.5,  # Creates the donut effect
   type = "pie"
-) %>%
+) |>
   layout(
     title = list(
       text = "Greenhouse Gas Emissions CO<sub>2</sub> by Sector in Botswana", 
@@ -309,8 +309,8 @@ vulnerability_data <- data.frame(
 )
 
 # Pie Chart
-vulnerability_data %>%
-  e_charts(name) %>%
+vulnerability_data |>
+  e_charts(name) |>
   e_pie(
     serie = value,
     radius = c("45%", "75%"),
@@ -331,8 +331,8 @@ vulnerability_data %>%
       borderColor = "#fff",
       borderWidth = 2
     )
-  ) %>%
-  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  ) |>
+  e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
     text = "Botswana Vulnerability to Climate Hazards",
     left = "center",
@@ -341,7 +341,7 @@ vulnerability_data %>%
       fontFamily = "Helvetica",
       fontSize = 18
     )
-  ) %>%
+  ) |>
   e_legend(show = FALSE)
 ```
 ### Row {height=40%}
@@ -354,8 +354,8 @@ vulnerability_data <- data.frame(
 )
 
 # Pie Chart
-vulnerability_data %>%
-  e_charts(name) %>%
+vulnerability_data |>
+  e_charts(name) |>
   e_pie(
     serie = value,
     radius = c("45%", "75%"),
@@ -376,8 +376,8 @@ vulnerability_data %>%
       borderColor = "#fff",
       borderWidth = 2
     )
-  ) %>%
-  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  ) |>
+  e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
     text = "Botswana Vulnerability to Climate Hazards",
     left = "center",
@@ -386,7 +386,7 @@ vulnerability_data %>%
       fontFamily = "Helvetica",
       fontSize = 18
     )
-  ) %>%
+  ) |>
   e_legend(show = FALSE)
 ```
 
@@ -439,8 +439,8 @@ vulnerability_data <- data.frame(
 )
 
 # Pie Chart
-vulnerability_data %>%
-  e_charts(name) %>%
+vulnerability_data |>
+  e_charts(name) |>
   e_pie(
     serie = value,
     radius = c("45%", "75%"),
@@ -461,8 +461,8 @@ vulnerability_data %>%
       borderColor = "#fff",
       borderWidth = 2
     )
-  ) %>%
-  e_color(c("#2d5e5b", "#e0e0e0")) %>%
+  ) |>
+  e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
     text = "Botswana Vulnerability to Climate Hazards",
     left = "center",
@@ -471,7 +471,7 @@ vulnerability_data %>%
       fontFamily = "Helvetica",
       fontSize = 18
     )
-  ) %>%
+  ) |>
   e_legend(show = FALSE)
 ```
 ### Row {height="30%"}
@@ -484,8 +484,8 @@ vulnerability_data <- data.frame(
 )
 
 # Pie Chart
-vulnerability_data %>%
-  e_charts(name) %>%
+vulnerability_data |>
+  e_charts(name) |>
   e_pie(
     serie = value,
     radius = c("45%", "75%"),
@@ -506,7 +506,7 @@ vulnerability_data %>%
       borderColor = "#fff",
       borderWidth = 2
     )
-  ) %>%
+  ) |>
   e_color(c("#2d5e5b", "#e0e0e0")) |>
   e_title(
     text = "Botswana Vulnerability to Climate Hazards",
