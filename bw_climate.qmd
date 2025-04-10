@@ -475,12 +475,12 @@ vulnerability_data |>
   e_legend(show = FALSE)
 ```
 ### Row {height="30%"}
-```{r climate_sevr}
-library(echarts4r)
+```{r coping_capa}
+#| label: Lack of Coping Capacity
 # Data
 vulnerability_data <- data.frame(
   name = c("Score", "Remaining"),
-  value = c(3.6, 1.4)
+  value = c(4.6, 0.4)
 )
 
 # Pie Chart
