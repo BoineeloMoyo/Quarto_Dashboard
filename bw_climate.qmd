@@ -92,8 +92,8 @@ e_charts() |>
 ```{r avr_temp}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
-  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Average Temperature</p>",
-  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>", 24.5, "°C", "</p>",
+  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Helvetica;''>Average Temperature</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Helvetica;''>", 24.5, "°C", "</p>",
   "</div>"
 ))
 ```
@@ -103,8 +103,8 @@ htmltools::HTML(paste0(
 ```{r annual_inc}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
-  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Temperature Increase / annum</p>",
-  "<p style='font-size:34px; color:#0a4541 font-weight:bold; font-family: Roboto;''>", "+", 2.1, "°C", "</p>",
+  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Helvetica;''>Temperature Increase / annum</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Helvetica;''>", "+", 2.1, "°C", "</p>",
   "</div>"
 ))
 ```
@@ -157,9 +157,9 @@ p <- ggplot(temp_long, aes(x = Month, y = Districts, fill = Temperature, text =
   scale_fill_gradient2(low = "#abcbcf", mid = "#418186", high = "#1e3435", midpoint = mean(temp_long$Temperature)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
-  plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 14),
-  axis.title = element_text(family = "Roboto", face = "bold", size = 10),
-  axis.text = element_text(family = "Roboto", size = 10)) +
+  plot.title = element_text(hjust = 0.5, face = "bold", family = "Helvetica", size = 14),
+  axis.title = element_text(family = "Helvetica", face = "bold", size = 10),
+  axis.text = element_text(family = "Helvetica", size = 10)) +
   labs(title = "Average Monthly Maximumn Temperatures (°C) of Botswana Districts",
        x = "Month",
        y = "District",
@@ -183,7 +183,7 @@ p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
        x = "Year", y = "Precipitation (mm)",
        color = "Year") +
   theme(
-    plot.title = element_text(hjust = 0.5, face = "bold", family = "Roboto", size = 14),
+    plot.title = element_text(hjust = 0.5, face = "bold", family = "Helvetica", size = 14),
     axis.title.x = element_text(size = 8, face = "bold.italic"),
     axis.title.y.left = element_text(size = 10, face = "bold.italic"),
     axis.title.y.right = element_text(size = 10, face = "bold.italic"),
@@ -287,7 +287,7 @@ donut_plotly
 ```
 
 # Climate Metrics {orientation="columns"}
-## Column {width="30%"}
+## Column {width="20%"}
 ### Row {height=30%}
 ```{r climate_vul}
 #| title: Climate vulnerability (/5)
@@ -338,10 +338,11 @@ vulnerability_data |>
 ### Row {height=30%}
 ::: {.valuebox icon="emoji-surprise" color="light"}
 ```{r global_emms}
+#| title: Global Emissions in %
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
-  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>Global GHG emissions in 2021</p>",
-  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>0.05%</p>",
+  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Helvetica;''>Global GHG emissions in 2021</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Helvetica;''>0.05%</p>",
   "</div>"
 ))
 ```
@@ -432,7 +433,7 @@ river |>
   e_title("River charts", "(Streamgraphs)")
 ```
 
-## Column {width=30%}
+## Column {width=20%}
 ### Row {height=30%}
 ```{r risk_indicator}
 #| title: Climate Driven Risk Indicator (/5)
@@ -483,8 +484,8 @@ vulnerability_data |>
 ```{r cagr}
 htmltools::HTML(paste0(
   "<div style='text-align: center;'>",
-  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Roboto;''>CO2 Compund Annual Growth Rate (CAGR)</p>",
-  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Roboto;''>1.5%</p>",
+  "<p style='font-size:28px; color:#418186; font-weight:bold; font-family: Helvetica;''>CO2 Compund Annual Growth Rate (CAGR)</p>",
+  "<p style='font-size:34px; color:#0a4541; font-weight:bold; font-family: Helvetica;''>1.5%</p>",
   "</div>"
 ))
 ```
