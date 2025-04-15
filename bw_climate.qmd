@@ -419,8 +419,7 @@ df |>
 #| title: Types of GHG emissions in Botswana
 
 # Load your data
-ghg <- read_csv("~/GIT/daten_import/1_datenpruefung/rcode/datenberdarfstab_cq/bw_ghg.csv") # Adjust path if needed
-read_csv("./data/bw_ghg.csv")
+ghg <- read_csv("./data/bw_ghg.csv")
 # Convert emissions to million metric tonnes
 ghg <- ghg %>%
   mutate(across(-Year, ~ .x / 1e6)) %>%
