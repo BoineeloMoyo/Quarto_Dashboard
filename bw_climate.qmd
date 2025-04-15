@@ -288,7 +288,7 @@ donut_plotly <- plot_ly(
 donut_plotly
 ```
 
-# Climate Metrics {orientation="columns"}
+# Global Climate Metrics {orientation="columns"}
 ## Column {width="20%"}
 ### Row {height=30%}
 ```{r climate_vul}
