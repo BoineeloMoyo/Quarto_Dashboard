@@ -416,6 +416,7 @@ df |>
 ```
 ### Row {height=50%}
 ```{r ghg_trends}
+load(echarts4r)
 #| title: Types of GHG emissions in Botswana
 
 # Load your data
@@ -423,8 +424,8 @@ ghg <- read_csv("./data/bw_ghg.csv")
 # Convert emissions to million metric tonnes
 ghg <- ghg %>%
   mutate(across(-Year, ~ .x / 1e6)) %>%
-  rename(`CO2` = CO2, `N₂O` = N20, `CH₄` = CH4, `F-Gases` = F_Gas) %>%
-  select(Year, CO2, `N₂O`, `CH₄`, `F-Gases`)  # reorder to show F-Gases last (drawn on top)
+  rename(CO2 = CO2, N2O = N20, CH4 = CH4, `F-Gases` = F_Gas) %>%
+  select(Year, CO2, N2O, CH4, `F-Gases`)  # reorder to show F-Gases last (drawn on top)
 
 # Define color palette
 teal_pal <- c("#abcbcf", "#418186", "#2d5e5b", "#1e3435")
@@ -433,9 +434,9 @@ teal_pal <- c("#abcbcf", "#418186", "#2d5e5b", "#1e3435")
 ghg |>
   e_charts(Year) |>
   e_river(CO2, name = "CO2") |>
-  e_river(`N₂O`, name = "N₂O") |>
-  e_river(`CH₄`, name = "CH₄") |>
-  e_river(`F-Gases`, name = "F-Gases") |>
+  e_river(N20, name = "N2O") |>
+  e_river(CH4, name = "CH4") |>
+  e_river(`FGas`, name = "F-Gases") |>
   e_color(teal_pal) |>
   e_tooltip(trigger = "axis") |>
   e_title(
