@@ -53,7 +53,7 @@ This dashboard displays the following:
 More information about how we are worsening our climate change challenges and impacting electricity and vegetation can be found on [this publication](https://link.springer.com/article/10.1007/s41976-024-00171-7).
 :::
 
-# Climate Metrics {orientation="columns"}
+# Local Climate Metrics {orientation="columns"}
 ## Column {width="70%"}
 ### Row {height=30%}
 
