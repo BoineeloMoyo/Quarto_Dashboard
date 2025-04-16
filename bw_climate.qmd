@@ -423,6 +423,9 @@ temperature |>
       right = "5%",
       containLabel = TRUE
     ) |>
+  e_y_axis(name = "Temperature (°C)") |>
+  e_x_axis(name = "Year")
+
 ```
 ### Row {height=50%}
 ```{r ghg_trends}
