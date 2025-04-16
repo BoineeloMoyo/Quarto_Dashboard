@@ -415,6 +415,14 @@ temperature |>
     subtext = "Daytime Land Surface Temperature (2000–2021)",
     left = "center"
   ) |>
+  e_legend(top = "10%") |>
+    e_grid(
+      top = "20%",
+      bottom = "15%",
+      left = "10%",
+      right = "5%",
+      containLabel = TRUE
+    ) |>
 ```
 ### Row {height=50%}
 ```{r ghg_trends}
