@@ -401,7 +401,7 @@ vulnerability_data |>
 ```{r line}
 #| title: Temperature trends
 library(readr)
-temperature <- read_csv("~/GIT/daten_import/1_datenpruefung/rcode/datenberdarfstab_cq/temperature_series.csv")
+temperature <- read_csv("./data/temperature_series.csv")
 glimpse(temperature)
 
 # Plot LST_Day as interactive area chart
