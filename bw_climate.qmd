@@ -400,6 +400,9 @@ vulnerability_data |>
 ### Row {height=50%}
 ```{r line}
 #| title: Temperature trends
+library(readr)
+temperature <- read_csv("~/GIT/daten_import/1_datenpruefung/rcode/datenberdarfstab_cq/temperature_series.csv")
+glimpse(temperature)
 
 df <- data.frame(
   x = seq(50),
