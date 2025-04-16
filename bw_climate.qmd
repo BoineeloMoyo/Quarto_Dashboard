@@ -408,12 +408,13 @@ glimpse(temperature)
 temperature |>
   e_charts(Year) |>
   e_area(LST_Day, name = "Daytime LST") |>
-
-df |> 
-  e_charts(x) |> 
-  e_line(z) |> 
-  e_area(w) |> 
-  e_title("Line and area charts")
+  e_color(c("#2d5e5b", "#1f7a8c")) |>
+  e_tooltip(trigger = "axis") |>
+  e_title(
+    text = "Temperature Trends in Botswana",
+    subtext = "Daytime Land Surface Temperature (2000–2021)",
+    left = "center"
+  ) |>
 ```
 ### Row {height=50%}
 ```{r ghg_trends}
