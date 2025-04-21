@@ -400,19 +400,32 @@ vulnerability_data |>
 ### Row {height=50%}
 ```{r line}
 #| title: Temperature trends
+library(readr)
+temperature <- read_csv("./data/temperature_series.csv")
+glimpse(temperature)
 
-df <- data.frame(
-  x = seq(50),
-  y = rnorm(50, 10, 3),
-  z = rnorm(50, 11, 2),
-  w = rnorm(50, 9, 2)
-)
+# Plot LST_Day as interactive area chart
+temperature |>
+  e_charts(Year) |>
+  e_area(LST_Day, name = "Daytime LST") |>
+  e_color(c("#2d5e5b", "#1f7a8c")) |>
+  e_tooltip(trigger = "axis") |>
+  e_title(
+    text = "Temperature Trends in Botswana",
+    subtext = "Daytime Land Surface Temperature (2000–2021)",
+    left = "center"
+  ) |>
+  e_legend(top = "10%") |>
+    e_grid(
+      top = "20%",
+      bottom = "15%",
+      left = "10%",
+      right = "5%",
+      containLabel = TRUE
+    ) |>
+  e_y_axis(name = "Temperature (°C)") |>
+  e_x_axis(name = "Year")
 
-df |> 
-  e_charts(x) |> 
-  e_line(z) |> 
-  e_area(w) |> 
-  e_title("Line and area charts")
 ```
 ### Row {height=50%}
 ```{r ghg_trends}
