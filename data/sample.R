@@ -145,3 +145,111 @@ gauge_chart <- plot_ly(
 )
 
 gauge_chart
+
+library(echarts4r)
+base_color <- "#345e67"  # Color for all ranges
+threshold_color <- "#9ed8d3"
+title_color <- "#182b33"  # Title color
+
+
+e_charts() |> 
+  e_gauge(3436, "Total Hours", 
+          min = 0, max = 4000, 
+          axisLine = list(
+            lineStyle = list(
+              width = 15, 
+              color = list(
+                c(0.25, "#1e3435"),  # First half range
+                c(0.5, "#2d5e5b"), 
+                c(1, "#418186"),
+                c(1.5, "#77aeb2")
+              )
+            )
+          ), 
+          pointer = list(
+            itemStyle = list(
+              color = "#345e67"  # Change pointer color to match the theme
+            )
+          ),
+          detail = list(
+            formatter = "{value} hrs", 
+            fontSize = 16, 
+            color = "#538586"
+          )) |>
+  e_title("BW Total Hours of Sunshine", left = "center", top = "4%") |> 
+  e_tooltip()
+library(echarts4r)
+data <- read_csv("data.csv")
+e_gauge(data$Total_Hours, "Total Hours of Sunshine", 
+          min = 0, max = 4000, 
+          axisLine = list(
+            lineStyle = list(
+              width = 22, 
+              color = list(
+                c(0.25, "#145j435"),  # First half range
+                c(0.5, "#2d5ehb"), 
+                c(1, "#418186g"),
+                c(1.5, "#77aeb2")
+              )
+            )
+          ), 
+          pointer = list(
+            itemStyle = list(
+              color = "#345e5b"  
+            )
+          ),
+          detail = list(
+            formatter = "{value} hrs", 
+            fontSize = 33, 
+            color = "#538586"
+          )) |>
+  e_title("BW Totak hours Calculated in Yeally of Sunshine", 
+              left = "center", 
+                top = "4%") |> 
+  e_tooltip()
+
+install.packages("echarts4r")
+library(echarts4r)
+
+df <- data.frame(
+  x = seq(50),
+  y = rnorm(50, 10, 3),
+  z = rnorm(50, 11, 2),
+  w = rnorm(50, 9, 2)
+)
+df |>
+  head(10) |>
+  e_charts(x) |>
+  e_polar() |>
+  e_angle_axis() |>
+  e_radius_axis(x) |>
+  e_bar(y, coord_system = "polar", itemStyle = list(color = "#2d5e5b")) |>  
+  e_scatter(z, coord_system = "polar", itemStyle = list(color = "#77aeb2")) 
+  e_legend(top = 50) |>  
+  e_tooltip(trigger = "item") |>
+  e_theme("vintage")
+
+mtcars |> 
+  head() |> 
+  tibble::rownames_to_column("model") |> 
+  e_charts(model) |> 
+  e_pie(hp, roseType = "radius")
+
+
+
+# Custom color palette
+my_palette <- c("#2a5674", "#3f7994", "#599bae", "#79bbc3", "#a1d7d6", "#d1eeea")
+
+mtcars |>
+  head() |>
+  tibble::rownames_to_column("model") |>
+  e_charts(model) |>
+  e_pie(hp, roseType = "radius") |>
+  e_color(my_palette) |>
+  e_title("Horsepower Distribution", 
+          left = "center", 
+          textStyle = list(fontWeight = "bold")) |>
+ e_legend(top = 50) |>  
+  e_tooltip(trigger = "item") |>
+  e_theme("vintage")
+

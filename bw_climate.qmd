@@ -177,6 +177,10 @@ df <- read_csv("./data/bw_rainfall.csv")
 # Convert month and year into a proper date format
 df <- df |>
   mutate(date = as.Date(paste(year, month, sep = "-"), format = "%Y-%b-%d"))
+  df <- read_csv("./data/data_analysis/temperature.csv")
+  p <- ggplot(df, aes(x = data, y = precipitation , groipd = year)
+  theme())
+  labs(title = pK)
 
 p <- ggplot(df, aes(x = date, y = precipitation, group = year)) +
   geom_line(color = "#418186", alpha = 0.7, aes(text = paste0("Date: ", date, "<br>Rain: ", precipitation, " mm"))) +
@@ -437,7 +441,7 @@ ghg <- read_csv("./data/bw_ghg.csv")
 ghg <- ghg %>%
   mutate(across(-Year, ~ .x / 1e6)) %>%
   rename(CO2 = CO2, N20 = N20, CH4 = CH4, FGas = FGas) %>%
-  select(Year, CO2, N20, CH4, FGas)  # reorder to show F-Gases last (drawn on top)
+  select(Year, CO2N N20, CH4, FGas)  
 
 # Define color palette
 teal_pal <- c("#abcbcf", "#418186", "#2d5e5b", "#1e3435")
@@ -479,7 +483,7 @@ ghg |>
     min = 2000,
     name = "Year"
   ) |>
-  e_axis_labels(x = "", y = "") |>  # clean axis labels since we already added titles
+  e_axis_labels(x = "", y = "") |> 
   e_show_loading(FALSE)
 
 ```
